@@ -157,19 +157,10 @@ for d_ind in range (0, dolya_steps+1):
 writer.save()
 del writer
 
-
 ''' 
-
-fig = go.Figure(data=[go.Surface(z=res_wide_M.values)])
-
-fig.update_layout(title='Mt Bruno Elevation', autosize=True,
-                  width=500, height=500,
-                  margin=dict(l=65, r=50, b=65, t=90))
-fig.show()
     
 # ----- Counting potfolios in BTC
 
-#port_0['date'] = pd.to_datetime(port_0['date']).dt.date
 port_0_btc = port_0.copy()
 port_0_btc.iloc[:,1:Ncol] = port_0.iloc[:,1:Ncol].div(curs_w.iloc[:,1], axis=0)
 # port_0.iloc[:,1:9] = port_0.iloc[:,1:9].round(4)
